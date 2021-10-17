@@ -75,5 +75,38 @@ def test_to_string():
     node1= Linked_list_.insert("c")
     node2= Linked_list_.insert("b")
     node3= Linked_list_.insert("a")
-    actual= Linked_list_.to_string()
+    actual= Linked_list_.__str__()
     assert actual == expected
+
+def test_append():
+    Linked_list_ = Linked_list()
+    Linked_list_.append(1)
+    assert Linked_list_.head.data_ is 1
+    Linked_list_.append(2)
+    assert Linked_list_.head.next_.data_ is 2
+    assert Linked_list_.head.next_.next_ is None
+
+
+
+def test_insertAfter():
+    Linked_list_ = Linked_list()
+    assert Linked_list_.insertAfter(5,1) == "No change, method exception"
+    Linked_list_.append(5)
+    Linked_list_.insertAfter(5,1)
+    assert Linked_list_.head.next_.data_ == 1
+    assert Linked_list_.head.next_.next_ == None
+    Linked_list_.insertBefore(1,4)
+    assert Linked_list_.head.next_.data_ == 4
+    assert Linked_list_.head.next_.next_.data_ == 1
+
+
+
+def test_insertBefore():
+    Linked_list_ = Linked_list()
+    assert Linked_list_.insertBefore(5,1) == "No change, method exception"
+    Linked_list_.append(5)
+    Linked_list_.insertBefore(5,1)
+    assert Linked_list_.head.data_ == 1
+    Linked_list_.insertBefore(5,2)
+    assert Linked_list_.head.next_.data_ == 2
+    assert Linked_list_.head.next_.next_.data_ == 5
