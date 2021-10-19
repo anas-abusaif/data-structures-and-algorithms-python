@@ -28,3 +28,21 @@ using classes to implement linked list data structure.
 - [x] Can successfully insert a node before the first node of a linked list
 - [x] Can successfully insert after a node in the middle of the linked list
 - [x] Can successfully insert a node after the last node of the linked list
+
+## PR:
+https://github.com/anas-abusaif/data-structures-and-algorithms-python/pull/7
+
+
+## White board process
+
+### Append:
+
+![white board](Untitled4.jpg)
+
+### Insert before:
+
+![whiteboard](Untitled5.jpg)
+
+### Insert after:
+
+![whiteboard](Untitled6.jpg)

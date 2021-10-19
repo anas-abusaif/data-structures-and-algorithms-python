@@ -1,43 +1,82 @@
 class Node:
+    '''
+     A class for creating a node
+
+    data: any
+    next: Node
+    '''
+
     def __init__(self, data_, next_=None):
         self.data_ = data_
         self.next_ = next_
 
 
 class Linked_list:
+    """
+    A class for creating instances of a Linked List.
+  
+    Data and other attributes defined here:
+  
+    head: Node | None
+
+    Methods defined here
+
+    insert(value: any)
+    contains(value: any) -> bool
+    """
     def __init__(self, head=None):
         self.head = head
 
     def insert(self, value):
+        '''
+        Arguments: value
+        Returns: nothing
+        Adds a new node with that value to the head of the list with an O(1) Time performance.
+        '''
         self.head = Node(value, self.head)
 
     def includes(self, value):
+        '''
+        Arguments: value
+        Returns: Boolean
+        Indicates whether that value exists as a Node’s value somewhere within the list.
+
+        '''
         if self.head == None:
             return False
         else:
-            while self.head is not None:
-                if self.head.data_ == value:
+            this_node=self.head
+            while self.head:
+                if this_node.data_ == value:
                     return True
-                self.head = self.head.next
+                this_node = this_node.next
                 return False
 
     def __str__(self):
+        '''
+        to string
+        Arguments: none
+        Returns: a string representing all the values in the Linked List, formatted as:
+        "{ a } -> { b } -> { c } -> NULL"
+        '''
         result = ""
-        while self.head is not None:
-            result += "{ " + str(self.head.data_) + " } -> "
-            self.head = self.head.next_
+        this_node=self.head
+        while this_node:
+            result += "{ " + str(this_node.data_) + " } -> "
+            this_node = this_node.next_
         result += "NULL"
         return result
+
     def append(self, value):
         """
-        Adds a node with a value to the end of tje list
+        Adds a node with a value to the end of the list
         """
         node_ = Node(value)
         if not self.head:
             self.head = node_
         else:
             current = self.head
-            while current.next_ is not None:
+            while current.next_:
                 current = current.next_
             current.next_ = node_
 
@@ -57,8 +96,8 @@ class Linked_list:
             a = current.next_
             current.next_=node_
             node_.next_ = a
-        except TypeError:
-            return f'please enter a proper type'
+        except IndexError:
+            return 'please enter a proper type'
         except:
             return "No change, method exception"
 
