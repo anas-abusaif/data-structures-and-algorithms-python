@@ -61,6 +61,19 @@ def test_linked_list_insert_twice():
     assert Linked_list_.head.next_.data_ == 0
 
 
+def test_head_is_first_node():
+    expected = 1
+    Linked_list_ = Linked_list()
+    Linked_list_.insert(0)
+    Linked_list_.insert(1)
+    node = Linked_list_.head
+    actual = node.data_
+    assert actual == expected
+    assert Linked_list_.head.next_.data_ == 0
+
+
+
+
 def test_linked_list_includes_twice():
   expected =True
   Linked_list_ = Linked_list()
