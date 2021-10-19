@@ -1,7 +1,7 @@
 from new_implementation import __version__
 from new_implementation.new_implementation import Node, Linked_list
 import pytest
-
+import string
 
 def test_version():
     assert __version__ == "0.1.0"
@@ -138,3 +138,20 @@ def test_return_Kth_value():
     assert Linked_list_.return_Kth_value(7)=='such value does not exist'
     assert Linked_list_.return_Kth_value(6)=='such value does not exist'
     assert Linked_list_.return_Kth_value(-4)==4
+
+
+
+def test_ziplists():
+    # Arrange
+    expected='{ a } -> { 0 } -> { b } -> { 1 } -> { c } -> { 2 } -> { d } -> { 3 } -> { e } -> { 4 } -> { f } -> { 5 } -> { g } -> { 6 } -> { h } -> { 7 } -> { i } -> { 8 } -> NULL'
+    list1=Linked_list()
+    list2=Linked_list()
+    for i in string.ascii_lowercase[0:10]:
+        list1.append(i)
+    for i in range(0,10):
+        list2.append(i)
+    # Act
+    actual = Linked_list().zipLists(list1,list2)
+    # Assert
+    assert actual== expected
+
