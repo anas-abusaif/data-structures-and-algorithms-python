@@ -85,9 +85,9 @@ def test_linked_list_includes_twice():
 def test_to_string():
     expected = "{ a } -> { b } -> { c } -> NULL"
     Linked_list_ = Linked_list()
-    node1= Linked_list_.insert("c")
-    node2= Linked_list_.insert("b")
-    node3= Linked_list_.insert("a")
+    Linked_list_.insert("c")
+    Linked_list_.insert("b")
+    Linked_list_.insert("a")
     actual= Linked_list_.__str__()
     assert actual == expected
 
@@ -123,3 +123,18 @@ def test_insertBefore():
     Linked_list_.insertBefore(5,2)
     assert Linked_list_.head.next_.data_ == 2
     assert Linked_list_.head.next_.next_.data_ == 5
+
+
+def test_return_Kth_value():
+    # Arrange
+    expected=4
+    Linked_list_=Linked_list()
+    for i in range(1,7):
+        Linked_list_.append(i)
+    #Act
+    actual=Linked_list_.return_Kth_value(2)
+    # Assert
+    assert actual== expected
+    assert Linked_list_.return_Kth_value(7)=='such value does not exist'
+    assert Linked_list_.return_Kth_value(6)=='such value does not exist'
+    assert Linked_list_.return_Kth_value(-4)==4
