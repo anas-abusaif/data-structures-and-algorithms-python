@@ -56,3 +56,7 @@ https://github.com/anas-abusaif/data-structures-and-algorithms-python/pull/10
 ### Return Kth value:
 
 ![whiteboard](Untitled7.jpg)
+
+### ziplists:
+
+![whiteboard](Untitled8.jpg)
