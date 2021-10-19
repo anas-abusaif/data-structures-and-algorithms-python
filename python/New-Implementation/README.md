@@ -30,8 +30,7 @@ using classes to implement linked list data structure.
 - [x] Can successfully insert a node after the last node of the linked list
 
 ## PR:
-https://github.com/anas-abusaif/data-structures-and-algorithms-python/pull/7
-
+https://github.com/anas-abusaif/data-structures-and-algorithms-python/pull/9
 
 ## White board process
 
