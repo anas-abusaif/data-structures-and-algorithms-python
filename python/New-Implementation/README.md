@@ -28,9 +28,17 @@ using classes to implement linked list data structure.
 - [x] Can successfully insert a node before the first node of a linked list
 - [x] Can successfully insert after a node in the middle of the linked list
 - [x] Can successfully insert a node after the last node of the linked list
+- [x] Where k is greater than the length of the linked list
+- [x] Where k and the length of the list are the same
+- [x] Where k is not a positive integer
+- [x] Where the linked list is of a size 1
+- [x] “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
 
 ## PR:
-https://github.com/anas-abusaif/data-structures-and-algorithms-python/pull/9
+
+
+https://github.com/anas-abusaif/data-structures-and-algorithms-python/pull/10
+
 
 ## White board process
 
@@ -45,3 +53,7 @@ https://github.com/anas-abusaif/data-structures-and-algorithms-python/pull/9
 ### Insert after:
 
 ![whiteboard](Untitled6.jpg)
+
+### Return Kth value:
+
+![whiteboard](Untitled7.jpg)

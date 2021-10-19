@@ -118,3 +118,22 @@ class Linked_list:
                 current = current.next_
         except:
             return "No change, method exception"
+
+
+    def return_Kth_value(self,k):
+        '''
+        takes one integer and reterns the value of the integers position from the tail
+        '''
+        try:
+            current=self.head
+            list_values=[]
+            while current.next_:
+                list_values.append(current.data_)
+                current=current.next_
+            list_values.append(current.data_)
+            list_values.reverse()
+            return list_values[k]
+        except IndexError:
+            return 'such value does not exist'
+
+
