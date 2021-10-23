@@ -1,5 +1,6 @@
 from new_implementation import __version__
 from new_implementation.new_implementation import Node, Linked_list
+from new_implementation.zip_list import zipLists
 import pytest
 import string
 
@@ -151,7 +152,7 @@ def test_ziplists():
     for i in range(0,10):
         list2.append(i)
     # Act
-    actual = Linked_list().zipLists(list1,list2)
+    actual = zipLists(list1,list2)
     # Assert
     assert actual== expected
 
