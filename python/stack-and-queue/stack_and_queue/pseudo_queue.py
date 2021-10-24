@@ -1,12 +1,15 @@
-from stack_and_queue.Node import Node
+from Node import Node
+from stack import Stack
 
-class Queue():
+class Pseudo_queue():
   '''
   a class that istances a queue of Nodes
   '''
-  def __init__(self,front=None,back=None):
+  def __init__(self,front,back):
     self.front=front
     self.back=back
+    self.stack1=Stack()
+    self.stack2=Stack()
 
 
   def enqueue(self,value):
@@ -40,30 +43,3 @@ class Queue():
       return dequeued.data_
     except:
       raise Exception('this queue is empty')
-
-  
-
-  def peek(self):
-    '''
-    Arguments: none
-    Returns: Value of the node located at the front of the queue
-    Should raise exception when called on empty stack
-
-    '''
-
-    try:
-      return self.front.data_
-    except:
-      raise Exception('this queue is empty')
-
-  
-  def is_empty(self):
-    '''
-    Arguments: none
-    Returns: Boolean indicating whether or not the queue is empty
-    '''
-
-    if self.back:
-      return False
-    else:
-      return True
