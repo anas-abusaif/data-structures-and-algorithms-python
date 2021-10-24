@@ -32,3 +32,13 @@ using classes to implement Stack and queue data structures.
 
 ## PR
 https://github.com/anas-abusaif/data-structures-and-algorithms-python/compare/stack-and-queueu?expand=1
+
+
+## Whiteboard Process
+
+### Enqueue
+![white board](Untitled.jpg)
+
+
+### Dequeue
+![white board](Untitled1.jpg)
