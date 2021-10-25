@@ -1,5 +1,5 @@
-from Node import Node
-from stack import Stack
+from stack_and_queue.Node import Node
+from stack_and_queue.stack import Stack
 
 class Pseudo_queue():
   '''
