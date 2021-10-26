@@ -1,4 +1,45 @@
-from stack_and_queue.stack import Stack
+class Node:
+
+    def __init__(self,data=''):
+        self.data= data
+        self.next = None
+
+class Stack:
+
+    def __init__(self):
+        self.top = None
+        self.len = 0
+
+
+    def push(self,value):
+        node = Node(value)
+        node.next = self.top
+        self.top = node
+        self.len+=1
+
+    def pop(self):
+        if not self.top:
+            raise Exception ( 'empty stack')
+
+        temp = self.top
+        self.top = self.top.next
+        temp.next = None
+
+        return temp.data
+
+    def __len__(self):
+        return self.len
+
+
+    def __str__(self) -> str:
+        string = ''
+        temp = self.top
+
+        while temp:
+            string += f'{temp.data}->'
+            temp = temp.next
+
+        return string
 
 
 def validate_brackets(string):

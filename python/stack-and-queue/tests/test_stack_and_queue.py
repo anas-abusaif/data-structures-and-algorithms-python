@@ -1,6 +1,7 @@
 from stack_and_queue import __version__
 from stack_and_queue.queue import Queue
 from stack_and_queue.stack import Stack
+from stack_and_queue.validate_brackets import validate_brackets
 import pytest
 
 
@@ -153,3 +154,21 @@ def test_dequeue_or_peek_on_empty_queue():
         queue_=Queue()
         queue_.dequeue()
         queue_.peek()
+
+
+def test_validate_brackets_true():
+    # Arrange
+    expected=True
+    # Act
+    actual=validate_brackets('{[]}[]({()})')
+    # Assert
+    assert actual== expected
+
+
+def test_validate_brackets_false():
+    # Arrange
+    expected=False
+    # Act
+    actual=validate_brackets('{[]}]({(})')
+    # Assert
+    assert actual== expected
