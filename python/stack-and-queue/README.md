@@ -42,3 +42,4 @@ https://github.com/anas-abusaif/data-structures-and-algorithms-python/compare/st
 
 ### Dequeue
 ![white board](Untitled1.jpg)
+![white board](Untitled2.jpg)
