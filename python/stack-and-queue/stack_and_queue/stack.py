@@ -1,5 +1,5 @@
-from stack_and_queue.Node import Node
-
+# from stack_and_queue.Node import Node
+from Node import Node
 
 class Stack():
   '''
@@ -60,3 +60,4 @@ class Stack():
       return False
     else:
       return True
+
