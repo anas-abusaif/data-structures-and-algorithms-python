@@ -7,3 +7,4 @@
 | 3 | [Binary Search](python/array-binary-search.md)|
 | 4 | [Binary Search](python/New-Implementation/README.md)|
 | 5 | [Queue and Stack](python/stack-and-queue/README.md)|
+| 6 | [Trees](python/trees/README.md)|
