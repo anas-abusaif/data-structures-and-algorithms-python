@@ -29,3 +29,8 @@ Big O of space = O(1)
 [x] - Can successfully return a collection from a preorder traversal
 [x] - Can successfully return a collection from an inorder traversal
 [x] - Can successfully return a collection from a postorder traversal
+
+## White Noards
+
+### Trees Max
+![max](Untitled.jpg)

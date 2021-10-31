@@ -174,7 +174,7 @@ def test_contains_value():
     # set expected list
     expected = True
     # set actual to the tree root value
-    actual = tree.__contains__("B")
+    actual = tree.contains("B")
     # assert actual is same as expected
     assert actual == expected
 
@@ -189,11 +189,35 @@ def test_not_contains_value():
     # set expected list
     expected = False
     # set actual to the tree root value
-    actual = tree.__contains__("E")
+    actual = tree.contains("E")
     # assert actual is same as expected
     assert actual == expected
 
 def test_search_in_empty_tree():
    with pytest.raises(Exception):
        tree = Binary_search()
-       actual = tree.__contains__("O")
+       actual = tree.contains("O")
+
+
+
+def test_trees_max():
+  # Arrange
+  expected=1234
+  # Act 
+  tree=BinaryTree()
+  a_node = Node(1234)
+  b_node = Node(2)
+  c_node = Node(3)
+  d_node = Node(4)
+  a_node.left = b_node
+  a_node.right = c_node
+  b_node.left = d_node
+  tree.root=a_node 
+  actual = tree.tree_max()
+  # Assert
+  assert actual==expected
+
+def test_trees_max_empty():
+   with pytest.raises(Exception):
+       tree = Binary_search()
+       actual = tree.tree_max()

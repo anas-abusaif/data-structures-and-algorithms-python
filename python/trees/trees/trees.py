@@ -110,9 +110,15 @@ class BinaryTree:
     walk(self.root)
     return list_of_items
 
+  def tree_max(self):
+    list_=self.post_order()
+    return max(list_)
+
 class Binary_search(BinaryTree):
-  def __init__(self) -> None:
+  
+  def __init__(self):
       super().__init__()
+      self.root=None
 
   def add(self,value):
     node=Node(value)
@@ -139,15 +145,30 @@ class Binary_search(BinaryTree):
       raise Exception("The Tree is Empty")
 
     else:
-            temp = self.root
-            while temp:
-                if temp.data == value:
-                    return True
-                elif temp.data > value:
-                    if not temp.left:
-                        return False
-                    temp = temp.left
-                else:
-                    if not temp.right:
-                        return False
-                    temp = temp.right
+      temp = self.root
+      while temp:
+          if temp.data == value:
+              return True
+          elif temp.data > value:
+              if not temp.left:
+                  return False
+              temp = temp.left
+          else:
+              if not temp.right:
+                  return False
+              temp = temp.right
+
+
+
+tree=BinaryTree()
+
+a_node = Node(1234)
+b_node = Node(2)
+c_node = Node(3)
+d_node = Node(4)
+a_node.left = b_node
+a_node.right = c_node
+b_node.left = d_node
+tree.root=a_node 
+
+print(tree.tree_max())
