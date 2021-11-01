@@ -34,3 +34,6 @@ Big O of space = O(1)
 
 ### Trees Max
 ![max](Untitled.jpg)
+
+## Breadth first
+![bfs](Untitled1.jpg)

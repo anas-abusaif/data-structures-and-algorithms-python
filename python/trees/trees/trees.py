@@ -112,12 +112,15 @@ class BinaryTree:
 
   def tree_max(self):
     list_=self.post_order()
-    return max(list_)
+    max_=list_[0]
+    for i in list_:
+      if i> max_:
+        max_=i
+    return max_
 
 class Binary_search(BinaryTree):
   
   def __init__(self):
-      super().__init__()
       self.root=None
 
   def add(self,value):
@@ -159,16 +162,18 @@ class Binary_search(BinaryTree):
               temp = temp.right
 
 
-
-tree=BinaryTree()
-
-a_node = Node(1234)
-b_node = Node(2)
-c_node = Node(3)
-d_node = Node(4)
-a_node.left = b_node
-a_node.right = c_node
-b_node.left = d_node
-tree.root=a_node 
-
-print(tree.tree_max())
+if __name__=="__main__":
+  tree=BinaryTree()
+  a_node = Node(1234)
+  b_node = Node(2)
+  c_node = Node(3)
+  d_node = Node(4)
+  e_node=Node(1123)
+  f_node=Node(950)
+  a_node.left = b_node
+  a_node.right = c_node
+  b_node.left = d_node
+  c_node.left=e_node
+  e_node.left=f_node
+  tree.root=a_node 
+  print(tree.bfs())
