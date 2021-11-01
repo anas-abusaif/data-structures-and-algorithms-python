@@ -33,9 +33,7 @@ class BinaryTree:
 
     output: tree items
     """
-    # Queue breadth <-- new Queue()
     breadth = Queue()
-    # breadth.enqueue(root)
     breadth.enqueue(self.root)
 
     list_of_items = []
