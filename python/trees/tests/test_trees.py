@@ -3,6 +3,7 @@ from trees.trees import BinaryTree
 from trees.trees import Binary_search
 from trees.trees import Node
 from trees.breadth_first import breadth_first
+from trees.tree_fizz_buzz import tree_fizz_buzz
 import pytest
 
 
@@ -240,4 +241,23 @@ def test_beadth_first():
   e_node.left=f_node
   tree.root=a_node
   actual = breadth_first(tree)
+  assert actual==expected
+
+
+def test_tree_fizz_buzz():
+  expected="1234"
+  tree=BinaryTree()
+  a_node = Node(1234)
+  b_node = Node(2)
+  c_node = Node(3)
+  d_node = Node(5)
+  e_node=Node(15)
+  f_node=Node(30)
+  a_node.left = b_node
+  a_node.right = c_node
+  b_node.left = d_node
+  c_node.left=e_node
+  e_node.left=f_node
+  tree.root=a_node
+  actual = tree_fizz_buzz(tree).root.data
   assert actual==expected

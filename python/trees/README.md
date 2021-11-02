@@ -35,5 +35,8 @@ Big O of space = O(1)
 ### Trees Max
 ![max](Untitled.jpg)
 
-## Breadth first
+### Breadth first
 ![bfs](Untitled1.jpg)
+
+### Tree FizzBuzz
+![FizzBuzz](Untitled2.jpg)
