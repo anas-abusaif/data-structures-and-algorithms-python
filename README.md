@@ -8,3 +8,5 @@
 | 4 | [Binary Search](python/New-Implementation/README.md)|
 | 5 | [Queue and Stack](python/stack-and-queue/README.md)|
 | 6 | [Trees](python/trees/README.md)|
+| 7 | [insertion-sort](python/insertion-sort/README.md)|
+| 8 | [merge-sort](python/Merge-Sort/README.md)|
