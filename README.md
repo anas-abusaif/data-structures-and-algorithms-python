@@ -8,3 +8,4 @@
 | 4 | [Linked list insertions](python/New-Implementation/README.md)|
 | 5 | [Queue and Stack](python/stack-and-queue/README.md)|
 | 6 | [Trees](python/trees/README.md)|
+| 7 | [insertion sort](python/insertion-sort/README.md)|
