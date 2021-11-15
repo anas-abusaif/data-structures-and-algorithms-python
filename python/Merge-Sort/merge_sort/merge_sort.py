@@ -1,4 +1,7 @@
 def Mergesort(arr):
+    if type(arr) is not list:
+        return 'input is not a list'
+
     n = len(arr)
 
     if n > 1:
