@@ -62,3 +62,8 @@ Arguments: key Returns: Index in the collection for that key
 - [x] Successfully handle a collision within the hashtable
 - [x] Successfully retrieve a value from a bucket within the hashtable that has a collision
 - [x] Successfully hash a key to an in-range value
+
+## Whiteboard Process
+
+repeated word
+![repeated](Untitled.jpg)
