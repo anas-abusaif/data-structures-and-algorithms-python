@@ -1,4 +1,4 @@
-from hash_table import HashTable
+from hash_table.hash_table import HashTable
 
 
 def repeated_word(str_):
