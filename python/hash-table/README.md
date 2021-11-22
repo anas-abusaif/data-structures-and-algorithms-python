@@ -67,3 +67,6 @@ Arguments: key Returns: Index in the collection for that key
 
 repeated word
 ![repeated](Untitled.jpg)
+
+tree_intersection
+![intersection](Untitled1.jpg)
