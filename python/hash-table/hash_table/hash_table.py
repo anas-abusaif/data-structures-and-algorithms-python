@@ -39,6 +39,7 @@ class HashTable:
         """
         Takes a key which is a string and returns an integer which is the index that will be used to store the key/value pari in a Node at that index.
         """
+        print(sum([ord(char) for char in key]) * 7 % self.__size)
         return sum([ord(char) for char in key]) * 7 % self.__size
 
     def add(self, key, value):
@@ -79,8 +80,18 @@ class HashTable:
       # return None
       return None
       
-    def contains(self, key):
+    def contains(self,key):
+      # calculate index
       index = self.__hash(key)
+      if not self.__buckets[index]:
+          return False
+      linked_list = self.__buckets[index]
+      current = linked_list.head
+      while current:
+        # check if the key in each node matches
+        if current.value[0] == key:
+          # return the value of the node with the mathcing key
+          return True
+        current = current.next
 
-      return True if self.__buckets[index] else False
-      
+
