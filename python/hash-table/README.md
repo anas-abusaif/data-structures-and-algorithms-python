@@ -70,3 +70,6 @@ repeated word
 
 tree_intersection
 ![intersection](Untitled1.jpg)
+
+Left-join
+![join](Untitled2.jpg)
