@@ -20,7 +20,7 @@ class Queue:
         self.dq = deque()
 
     def enqueue(self, value):
-        self.dq.appendLeft(value)
+        self.dq.appendleft(value)
 
     def dequeue(self):
         self.dq.pop()
@@ -80,7 +80,6 @@ class Graph:
       Arguments: value
       Returns: The added node
     """
-        # new node
         v = Vertex(value)
         self.__adjacency_list[v] = []
         return v
@@ -122,7 +121,7 @@ class Graph:
             current_vertex = queue.dequeue()
             action(current_vertex)
 
-            neighbors = self.get_neigbors(current_vertex)
+            neighbors = self.get_neighbors(current_vertex)
 
             for edge in neighbors:
                 neighbor = edge.vertex
