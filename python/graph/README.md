@@ -52,3 +52,7 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 - [X]The proper size is returned, representing the number of nodes in the graph
 - [X]A graph with only one node and edge can be properly returned
 - [X]An empty graph properly returns null
+
+
+Graph Breadth First
+![whiteboard](Untitled.jpg)
