@@ -58,3 +58,6 @@ Graph Breadth First
 
 Graph Buisness Trip
 ![whiteboard](Untitled2.jpg)
+
+Graph Depth First
+![whiteboard](Untitled3.jpg)
